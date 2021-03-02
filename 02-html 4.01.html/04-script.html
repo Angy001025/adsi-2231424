@@ -6,15 +6,15 @@
 	<title>Script</title>
 </head>
 <body>
-	
-<h1>Menú</h1>
+	 <h1 id="username"></h1>
 
-<ul>
-  <li>Inicio</li>
-  <li>Noticias</li>
-  <li>Artículos</li>
-  <li>Contacto</li>
-</ul>
-
+    <script>
+        var username = document.getElementById('username');
+        var question = prompt('Cuál es su Nombre de Usuario ?');
+        if (question)
+            username.innerHTML = "Welcome: " + question;
+        else
+            username.innerHTML = "Welcome: Guess";
+    </script>
 </body>
 </html>
