@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas</title>
+</head>
+<body>
+	<h2>Square</h2>
+	<canvas id="Square"></canvas>
+	<h2>Rectangle</h2>
+	<canvas id="Rectangle"></canvas>
+	<h2>Triangle</h2>
+	<canvas id="Triangle"></canvas>
+	<h2>Circle</h2>
+	<canvas id="Circle"></canvas>
+	<h2>Heart</h2>
+	<canvas id="Heart"></canvas>
+	<h2>Text</h2>
+	<canvas id="Text"></canvas>
+	<script>
+		/*Square - - - - - - - - - */
+		var canvas = document.getElementById('Square');
+		var contxt = canvas.getContext('2d');
+		contxt.fillStyle = '#15dd64';
+		contxt.fillRect (0,0,100,100);
+		/* Rectangle - - - - - - - - -*/
+       var canvas = document.getElementById('Rectangle');
+       var contxt = canvas.getContext('2d');
+       contxt.fillStyle = '#32da27';
+       contxt.fillRect(0,0,200, 100);
+       /* Triangle */
+       var canvas = document.getElementById('Triangle');
+       var contxt = canvas.getContext('2d');
+       contxt.fillStyle = '#32dd';
+       contxt.beginPath();
+       contxt.moveTo(10, 110);
+       contxt.lineTo(110, 10);
+       contxt.lineTo(210, 110);
+       contxt.fill();
+		/*Circle - - - - - - - - */
+		var canvas = document.getElementById('Circle');
+       var contxt = canvas.getContext('2d');
+       contxt.fillStyle = '#35b3';
+       contxt.beginPath();
+       contxt.arc(60, 60, 60, 0, Math.PI*2, true);
+       contxt.closePath();
+       contxt.fill();
+		/* Text - - - - - - - - - */
+        var canvas = document.getElementById('Text');
+        var contxt = canvas.getContext('2d');
+        contxt.fillStyle = '#32fd29';
+        contxt.font = '60px Tahoma';
+        contxt.fillText("ADSI", 20, 80);
+        
+	</script>
+</body>
+</html>
