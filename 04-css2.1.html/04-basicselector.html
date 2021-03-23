@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Selector</title>
+	<style>
+		*{
+			border: 3px dotted blue
+			margin: 15px;
+			padding: 10px;
+		}
+		h2{
+			background-color: coral
+		}
+		p span{
+			background-color: yellow
+			margin: 1px
+			padding: 1px;
+		}
+		.highlight{
+			background-color: red
+		}
+
+		#elem03{
+			background-color: pink
+			color:crimson;
+		}
+		 div.box p.first{
+		 	background-color: silver
+		 	color:black;
+		 }
+	</style>
+</head>
+<body>
+	<h1>Basic Selectors</h1>
+	<hr>
+	<h2>Universal Selector: * </h2>
+	<div>
+		<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Delectus ipsam repellendus possimus atque, nulla itaque ad, ipsa velit praesentium tempore facere ducimus modi consequatur quibusdam voluptas porro, aperiam. Molestias, quos commodi dolorem porro repellendus quaerat ad atque nobis quia, suscipit expedita facere eum magni incidunt ullam pariatur! Sapiente libero, in dolore, enim eius veniam quisquam odit facilis pariatur natus magni.</p>
+	</div>
+	<h2>Type/Label Selector: h2 </h2>
+	<h2>Descending Selector: p span </h2>
+	<div>
+		<p><span>Lorem ipsum dolor</span> sit, amet consectetur adipisicing elit. Recusandae quam rerum aut accusantium nisi. <span>Explicabo repellat</span>, eum quis dolorum officia quisquam ducimus officiis eos et aliquid. Nisi eveniet, ad consectetur quam id perferendis, quod sapiente fugiat ducimus porro doloremque nesciunt maxime corrupti rem numquam sint a expedita voluptatum ea aut nam. Corporis autem quis ducimus deleniti quidem, totam eum quaerat!</p>
+	</div>
+	<h2 class="highlight">Class Selector: .highlight </h2>
+	<h2>ID Selector: #elem03 </h2>
+	<ol>
+		<li>
+			<div id="elen01">element 1</div>
+			<div id="elen02">element 2</div>
+			<div id="elen03">element 3</div>
+			<div id="elen04">element 4</div>
+			<div id="elen05">element 5</div>
+		</li>
+	</ol>
+	<h2>Combine Selector: div.box p.first </h2>
+	<div class="box">
+		<p class="first">Lorem</p>
+		<p>Lorem</p>
+		<p>Lorem</p>
+		<p>Lorem</p>
+		<p>Lorem</p>
+	</div>
+
+</body>
+</html>
