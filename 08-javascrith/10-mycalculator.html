@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Chanlleg Calculator</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style> 
+        div.calculator {
+            background: url(imgs/calculator 01/sol mode.png) no-repeat center;
+            height: 736px;
+            margin: 0 auto 40px auto;
+            position: relative;
+            transition: all 0.5s ease-out;
+            width: 414px;
+        }
+        div.calculator nav.mode {
+            left: 148px;
+            position: absolute;
+            top: 22px;
+            width: 120px;
+        }
+        div.calculator nav.mode a {
+            display: inline-block;
+            height: 40px;
+            transition: transform 0.2s ease-in;
+            width: 60px;
+        }
+        div.calculator nav.mode a#dark:hover {
+            transform: scale(1.04) translateX(2px);
+        }
+        div.calculator nav.mode a#light:hover {
+            transform: scale(1.04) translateX(-2px);
+        }
+        div.calculator nav.mode a:last-child {
+            margin-left: -5px;
+        }
+        div.calculator nav.mode a#light {
+            background: url(imgs/calculator 01/lightmod.png) no-repeat center;
+        }
+        div.calculator nav.mode a#dark {
+            background: url(imgs/calculator 01/darkmod.png) no-repeat center;
+        }
+        div.calculator div.display {
+            font-family: Roboto;
+            position: absolute;
+            top: 130px;
+            text-align: right;
+            right: 20px;
+            width: 300px;
+        }
+        div.calculator div.display p#operation {
+            color: orange;
+            font-weight: 300;
+            font-size: 18px;
+            margin: 0;
+        }
+        div.calculator div.display h4#answer {
+            color: pink;
+            font-weight: 400;
+            font-size: 64px;
+            opacity: 0.8;
+            margin: 0;
+        }
+        div.calculator nav.buttons {
+            left: 20px;
+            position: absolute;
+            top: 250px;
+            width: 377px;
+        }
+        div.calculator nav.buttons ul::selection {
+            background-color: transparent;
+        }
+        div.calculator nav.buttons ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        div.calculator nav.buttons ul li {
+            background-color: green;
+            display: inline-block;
+            height: 86px;
+            margin: 0px 6px 5px 0px;
+            opacity: 0.8;
+            transition: transform 0.2s ease-in;
+            width: 86px;
+        }
+        div.calculator nav.buttons ul li:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        div.calculator nav.buttons ul li:nth-child(4n) {
+            margin-right: 0;
+        }
+        div.calculator nav.buttons ul li#btnC {
+            background: url(imgs/calculator 01/btnC.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btnborar {
+            background: url(imgs/calculator 01/btnborar.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn% {
+            background: url(imgs/calculator 01/btn%.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn {
+            background: url(imgs/calculator 01/btn.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn1 {
+            background: url(imgs/calculator 01/btn1.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn2 {
+            background: url(imgs/calculator 01/btn2.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn3 {
+            background: url(imgs/calculator 01/btn3.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn+ {
+            background: url(imgs/calculator 01/btn+.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn4 {
+            background: url(imgs/calculator 01/btn4.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn5 {
+            background: url(imgs/calculator 01/btn5.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn6 {
+            background: url(imgs/calculator 01/btn6.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#multiplicacion {
+            background: url(imgs/calculator 01/multiplicacion.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn7 {
+            background: url(imgs/calculator 01/btn7.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn8 {
+            background: url(imgs/calculator 01/btn8.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn9 {
+            background: url(imgs/calculator 01/btn9.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn_ {
+            background: url(imgs/calculator 01/btn_.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btnreset {
+            background: url(imgs/calculator 01/btnrest.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn0 {
+            background: url(imgs/calculator 01/btn0.png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn. {
+            background: url(imgs/calculator 01/btn..png) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#btn= {
+            background: url(imgs/calculator 01/btn=.png) no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">&larr;</a></span>MyCalculator</h1>
+        </header>
+        <section>
+
+            <div class="calculator">
+                <nav class="mode">
+                    <a href="javascript:;" id="light"></a>
+                    <a href="javascript:;" id="dark"></a>
+                </nav>
+                <div class="display">
+                    <p id="operation"></p>
+                    <h4 id="answer"></h4>
+                </div>
+                <nav class="buttons">
+                    <ul>
+                        <li id="btnC"></li>
+                        <li id="btnborar"></li>
+                        <li id="btn%"></li>
+                        <li id="btn"></li>
+                        <li id="btn1"></li>
+                        <li id="btn2"></li>
+                        <li id="btn3"></li>
+                        <li id="btn+"></li>
+                        <li id="btn4"></li>
+                        <li id="btn5"></li>
+                        <li id="btn6"></li>
+                        <li id="multiplicacion"></li>
+                        <li id="btn7"></li>
+                        <li id="btn8"></li>
+                        <li id="btn9"></li>
+                        <li id="btn_"></li>
+                        <li id="btn rest"></li>
+                        <li id="btn0"></li>
+                        <li id="btn."></li>
+                        <li id="btn="></li>     
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <script>
+        var nchars    = 0;
+        var operation = document.getElementById('operation');
+        var anwser    = document.getElementById('anwser');
+        const skin  = document.querySelector('div.calculator');
+        const light = document.getElementById('light');
+        const dark  = document.getElementById('dark');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const btnC = document.getElementById('btnC');
+        function validateLength() {
+            if(nchars <= 28) {
+                nchars++;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function addCharacter(c) {
+            if(validateLength()) {
+                operation.innerText += c;
+            }
+        }
+        function clearCharacters() {
+            operation.innerText = '';
+            anwser.innerText = '';
+            nchars = 0;
+       }
+       light.onclick = function() {
+            skin.classList.remove('dark');
+        }
+        dark.onclick = function() {
+            skin.classList.add('dark');
+        }
+
+        bt1.onclick = function() {
+            addCharacter(1);
+        }
+        bt2.onclick = function() {
+            addCharacter(2);
+        }
+        bt3.onclick = function() {
+            addCharacter(3);
+        }
+
+        btClear.onclick = function() {
+            clearCharacters();
+        }
+    </script>
+</body>
+</html>
