@@ -339,7 +339,87 @@
 
         btClear.onclick = function() {
             clearCharacters();
+         }
+        btBackS . onclick  =  function ( )  {
+            backSpace ( ) ;
         }
+        btEqual . onclick  =  function ( )  {
+            igual ( ) ;
+        }
+        // Eventos de teclado
+        documento . onkeyup  =  function ( evento )  {
+            //console.log(event.keyCode);
+            switch  ( event . keyCode )  {
+                caso  8 :
+                    backSpace ( ) ;
+                    romper ;
+                caso  13 :
+                    igual ( ) ;
+                    romper ;
+                caso  46 :
+                    clearCharacters ( ) ;
+                    romper ;
+                caso  48 :
+                    addCharacter ( 0 ) ;
+                    romper ;
+                caso  49 :
+                    addCharacter ( 1 ) ;
+                    romper ;
+                caso  50 :
+                    addCharacter ( 2 ) ;
+                    romper ;
+                caso  51 :
+                    addCharacter ( 3 ) ;
+                    romper ;
+                caso  52 :
+                    addCharacter ( 4 ) ;
+                    romper ;
+                caso  53 :
+                    si ( evento . shiftKey  )
+                        addCharacter ( '%' ) ;
+                    demás
+                        addCharacter ( 5 ) ;
+                    romper ;
+                caso  54 :
+                    addCharacter ( 6 ) ;
+                    romper ;
+                caso  55 :
+                    addCharacter ( 7 ) ;
+                    romper ;
+                caso  56 :
+                    addCharacter ( 8 ) ;
+                    romper ;
+                caso  57 :
+                    addCharacter ( 9 ) ;
+                    romper ;
+                caso  187 :
+                    addCharacter ( '+' ) ;
+                    romper ;
+                caso  189 :
+                    addCharacter ( '-' ) ;
+                    romper ;
+                caso  190 :
+                    addCharacter ( '.' ) ;
+                    romper ;
+                caso  191 :
+                    addCharacter ( '/' ) ;
+                    romper ;
+                caso  219 :
+                    addCharacter ( '**' ) ;
+                    romper ;
+                caso  221 :
+                    addCharacter ( '*' ) ;
+                    romper ;
+            
+                por defecto :
+                    romper ;
+            }
+        }
+
+    </ script >
+    
+</ cuerpo >
+</ html >
 
     </script>
     
