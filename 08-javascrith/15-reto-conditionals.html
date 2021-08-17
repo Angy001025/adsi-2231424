@@ -208,30 +208,32 @@
         }
         function takeDecision() {
             if (gender == 'Female') {
-                vgender.setAttribute('src', 'imgs/conditionals/v-girl.svg');
-                vfullname.classList.remove('blue');
-                vfullname.classList.add('pink');
-                vfullname.innerText = fullname.value;
-                message.classList.remove('red');
-                message.classList.add('green');
-                vmessage.innerText = 'You will not go to war!';
-            } else {
+                gender.setAttribute('src', 'imgs/conditionals/GIRL.png');
+                fullname.classList.remove('magenta');
+                fullname.classList.add('pink');
+                fullname.innerText = fullname.value;
+                message.classList.remove('purple');
+                message.classList.add('#417');
+                message.innerText = 'You will not go to war!';
+            } 
+            else {
                 if (age >= 18) {
-                    vgender.setAttribute('src', 'imgs/conditionals/v-boy.svg');
-                    vfullname.classList.remove('pink');
-                    vfullname.classList.add('blue');
-                    vfullname.innerText = fullname.value;
-                    message.classList.remove('green');
-                    message.classList.add('red');
-                    vmessage.innerText = 'You must go to war!';
-                } else {
-                    vgender.setAttribute('src', 'imgs/conditionals/v-boy.svg');
-                    vfullname.classList.remove('pink');
-                    vfullname.classList.add('blue');
-                    vfullname.innerText = fullname.value;
-                    message.classList.remove('red');
-                    message.classList.add('green');
-                    vmessage.innerText = 'You will not go to war!';
+                    gender.setAttribute('src', 'imgs/conditionals/BOY.png');
+                    fullname.classList.remove('pink');
+                    fullname.classList.add('magenta');
+                    fullname.innerText = fullname.value;
+                    message.classList.remove('#418');
+                    message.classList.add('purple');
+                    message.innerText = 'You must go to war!';
+                } 
+                else {
+                    gender.setAttribute('src', 'imgs/conditionals/BOY.png');
+                    fullname.classList.remove('pink');
+                    fullname.classList.add('magenta');
+                    fullname.innerText = fullname.value;
+                    message.classList.remove('#419');
+                    message.classList.add('purple');
+                    message.innerText = 'You will not go to war!';
                 }
             }
         }
